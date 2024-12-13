@@ -1,0 +1,65 @@
+body {
+    background-color: $background;
+    color: $body-text;
+    font-size: 16px;
+    font-family: $font-primary;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: $titles;
+}
+
+.color-list {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 12px;
+    color: $titles;
+}
+
+.background-color {
+    background-color: $background;
+}
+
+.system-color {
+    background-color: $system;
+}
+
+.strokes-color {
+    background-color: $strokes;
+}
+
+.body-text-color {
+    background-color: $body-text;
+}
+
+.titles-color {
+    background-color: $titles;
+}
+
+.accent-color {
+    background-color: $accent;
+}
+
+.accent-hover-color {
+    background-color: $accent-hover;
+}
+
+.accent-secondary-color {
+    background-color: $accent-secondary;
+}
+
+.errors-color {
+    background-color: $errors;
+}
+
+.verification {
+    background-color: $verification;
+}
