@@ -1,0 +1,169 @@
+.column-logo {
+    width: 300px;
+    height: 100vh;
+    background-color: $accent;
+    background-color: $accent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 40px;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    background-color: $system;
+    border: 1px solid $stroke;
+    border-radius: 8px;
+    color: $titles;
+    font-size: 20px;
+    padding: 26.5px 30px;
+    transition: 0.3s;
+
+    &::webrit-outer-spin-button,
+    &::webrit-inner-spin-button {
+        display: none;
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+        border-color: $titles;
+    }
+
+    &:focus,
+    &:focus-visible {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.template-form {
+    padding: 0 12px;
+    max-width: 729px;
+    position: relative;
+    .btn-profile {
+        position: absolute;
+        left: -79px;
+        top: 0;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__subtitle {
+        margin-bottom: 40px;
+        color: $body-text;
+    }
+
+    .btn-row {
+        margin: 40px 0;
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &__questions {
+        max-width: 471px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        gap: 15px;
+    }
+}
+
+.page-login {
+    .template-form {
+        margin: 100px auto 0;
+    }
+
+    .template-form__questions {
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+    position: relative;
+    label {
+        position: absolute;
+        left: 30px;
+        top: 26.5px;
+    }
+}
+
+.control-box {
+    margin: 40px 0;
+    padding-left: 40px;
+}
+
+.input-row {
+    display: flex;
+    gap: 30px;
+}
+
+.control-box {
+    margin: 40px 0;
+    label {
+        position: relative;
+        padding-left: 40px;
+        font-size: 16px;
+    }
+
+    input {
+        display: none;
+        + label {
+            &::before {
+                content: "";
+                width: 26px;
+                height: 26px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: $system;
+                border: 1px solid $stroke;
+                border-radius: 4px;
+            }
+        }
+        &:checked,
+        &:hover {
+            + label {
+                &::before {
+                    border-color: $accent;
+                    background-color: $controll-btn-bg;
+                }
+            }
+        }
+
+        &:checked {
+            + label {
+                &::before {
+                    background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L5 8L12 1' stroke='%23B1FF5C' stroke-width='2'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+}
