@@ -6,12 +6,14 @@
     </div>
 
     <form class="template-form">
-        <button class="btn btn-profile">
-            <svg>
-                <use href="#arrow-back"></use>
-            </svg>
-        </button>
-        <h3 class="template-form__title">створити акаунт</h3>
+        <div class="title-box">
+            <button id="history-back" class="btn btn-profile" type="button">
+                <svg>
+                    <use href="#arrow-back"></use>
+                </svg>
+            </button>
+            <h3 class="template-form__title">створити акаунт</h3>
+        </div>
         <h6 class="template-form__subtitle">Для успішного проходження реєстрації заповніть поля, вказані нижче</h6>
         <div class="input-row">
             <div class="input-box">
@@ -24,8 +26,8 @@
             </div>
         </div>
         <div class="input-box">
-            <label for="tel">номер телефону</label>
-            <input id="tel" type="tel">
+            <!--<label for="tel">номер телефону</label>-->
+            <input id="tel" type="tel" placeholder="номер телефону">
         </div>
         <div class="input-box">
             <label for="email">email</label>
@@ -36,15 +38,16 @@
             <input id="telegram" type="text">
         </div>
         <div class="input-box">
-            <label for="password">пароль</label>
-            <input id="password" type="password">
+            <!--<label for="password">пароль</label>
+            <input id="password" type="password">-->
+            <input id="password" type="password" placeholder="пароль">
         </div>
         <div class="control-box">
             <input id="consent" type="checkbox">
             <label for="consent">Я погоджуюся з <a href="#">умовами користування</a> та <a href="#">політикою конфіденційності</a></label>
         </div>
         <div class="btn-row">
-            <button type="submit" class="btn btn-primary btn-large">отправить</button>
+            <button type="submit" class="btn btn-primary btn-large">зареєструватися</button>
         </div>
         <div class="template-form__questions">
             <p>вже маєте акаунт Onebit?<a href="#">увійти</a></p>

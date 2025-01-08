@@ -6,20 +6,23 @@
     </div>
 
     <form class="template-form">
-        <button class="btn btn-profile">
-            <svg>
-                <use href="#arrow-back"></use>
-            </svg>
-        </button>
-        <h3 class="template-form__title">увійти в акаунт</h3>
+        <div class="title-box">
+            <button id="history-back" class="btn btn-profile" type="button">
+                <svg>
+                    <use href="#arrow-back"></use>
+                </svg>
+            </button>
+            <h3 class="template-form__title">увійти в акаунт</h3>
+        </div>
         <h6 class="template-form__subtitle">Для успішного входу в особистий кабінет заповніть поля, які вказані нижче</h6>
         <div class="input-box">
             <label for="email">email</label>
             <input id="email" type="email">
         </div>
         <div class="input-box">
-            <label for="password">пароль</label>
-            <input id="password" type="password">
+            <!--<label for="password">пароль</label>
+            <input id="password" type="password">-->
+            <input id="password" type="password" placeholder="пароль">
         </div>
         <div class="btn-row">
             <button type="submit" class="btn btn-primary btn-large">увійти в акаунт</button>

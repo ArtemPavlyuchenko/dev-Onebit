@@ -21,6 +21,7 @@ input {
     font-size: 20px;
     padding: 26.5px 30px;
     transition: 0.3s;
+    width: 100%;
 
     &::webrit-outer-spin-button,
     &::webrit-inner-spin-button {
@@ -48,17 +49,18 @@ input {
 }
 
 .template-form {
-    padding: 0 12px;
-    max-width: 729px;
+    padding: 0 86px 0 12px;
+    max-width: 803px;
     position: relative;
+
     .btn-profile {
         position: absolute;
         left: -79px;
-        top: 0;
+        top: 3px;
     }
 
     &__title {
-        margin-bottom: 20px;
+        margin-bottom: 23px;
     }
     &__subtitle {
         margin-bottom: 40px;
@@ -79,12 +81,13 @@ input {
         margin: 0 auto;
         display: flex;
         gap: 15px;
+        font-size: 20px;
     }
 }
 
 .page-login {
     .template-form {
-        margin: 100px auto 0;
+        margin: 97px auto 100px 596px;
     }
 
     .template-form__questions {
@@ -140,10 +143,11 @@ input {
                 height: 26px;
                 position: absolute;
                 left: 0;
-                top: 0;
+                top: 50%;
                 background-color: $system;
                 border: 1px solid $stroke;
                 border-radius: 4px;
+                transform: translate(0, -50%);
             }
         }
         &:checked,
@@ -166,4 +170,18 @@ input {
             }
         }
     }
+}
+
+.hideShowPassword-toggle {
+    background: url(assets/img/icon-eye.svg) center/contain no-repeat transparent;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transform: translate(-30px, 0);
+    font-size: 0;
+    border: none;
+}
+
+.hideShowPassword-toggle-hide {
+    background: url(assets/img/icon-eye-active.svg) center/contain no-repeat transparent;
 }
