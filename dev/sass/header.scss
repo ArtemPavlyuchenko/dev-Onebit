@@ -1,0 +1,101 @@
+header {
+    .nav-link {
+        color: $titles;
+
+        &:hover,
+        &.dropdown-toggle.show {
+            color: $accent;
+            text-decoration: none;
+
+            &:after {
+                border-color: $accent;
+            }
+        }
+    }
+}
+
+.login {
+    .btn-restration {
+        display: none;
+    }
+
+    .btn-user,
+    .btn-exit {
+        display: block;
+    }
+}
+
+.btn-user,
+.btn-exit {
+    display: none;
+}
+
+
+.navbar-nav_country {
+    .nav-link {
+        color: $body-text;
+        font-weight: 600;
+        font-size: 18px;
+
+        &:after {
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+    }
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    vertical-align: 2px;
+    margin-left: 8px;
+    border-top: 3px solid $body-text;
+    border-right: 3px solid $body-text;
+    border-bottom: none;
+    border-left: none;
+    width: 10px;
+    height: 10px;
+    transform: rotate(135deg);
+}
+
+.navbar-nav {
+    .dropdown-menu {
+        background: $background;
+        border-radius: 8px;
+        padding: 5px 0;
+        border: 1px solid $stroke;
+        .dropdown-item {
+            color: $titles;
+            padding: 20px 25px 21px;
+            position: relative;
+
+            &:hover {
+                background-color: transparent;
+                color: $accent;
+                text-decoration: none;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 25px;
+                right: 25px;
+                bottom: 0;
+                height: 1px;
+                background-color: $stroke;
+            }
+        }
+
+        li {
+            &:last-child {
+                .dropdown-item {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-nav_language {
+    @extend .navbar-nav_country;
+}

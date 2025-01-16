@@ -1,0 +1,21 @@
+.reviews,
+.reviews-titles {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 12px;
+
+    h2{
+        width: 100%;
+        max-width: 460px;
+        padding-bottom: 60px;
+    }
+    P{
+        font-size: 20px;
+    }
+}
+
+.reviews-item {
+    background: $system;
+    border-radius: 15px; 
+}
