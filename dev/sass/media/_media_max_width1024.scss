@@ -1,4 +1,69 @@
 @media screen and (max-width: 1024px) {
+    header {
+        .container {
+            padding: 11px 20px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: o;
+                left: 0;
+                width: 100vw;
+            }
+        }
+        .navbar-brand {
+            margin-right: 0;
+            display: flex;
+
+            img {
+                max-height: 25px;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        background-color: #20251B;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .navbar-toggler__line {
+        width: 20px;
+        height: 2px;
+        display: flex;
+        background-color: $accent;
+        position: absolute;
+        left: 50%;
+        top: 15px;
+        transform: translate(-50%, 0);
+        transition: 0.4s;
+
+        &:nth-child(2) {
+            top: 21px;
+        }
+
+        &:nth-child(3) {
+            top: 27px;
+        }
+    }
+
+    [aria-expanded="true"] {
+        .navbar-toggler__line {
+            top: 19px;
+            transform: translate(-50%, 0) rotate(45deg);
+    
+            &:nth-child(2) {
+                top: 19px;
+                transform: translate(-50%, 0) rotate(-45deg);
+            }
+    
+            &:nth-child(3) {
+                opacity: 0;
+            }
+        }
+    }
+
     input {
         padding: 22.5px 20px;
     }

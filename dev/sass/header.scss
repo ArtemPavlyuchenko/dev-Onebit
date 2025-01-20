@@ -1,4 +1,18 @@
 header {
+    .navbar {
+        padding: 0;
+        &-brand {
+            padding: 0;
+            margin-right: 22px;
+        }
+    }
+
+    .container {
+        max-width: 1920px;
+        padding: 50px;
+        position: relative;
+    }
+
     .nav-link {
         color: $titles;
 
@@ -12,16 +26,28 @@ header {
             }
         }
     }
+
+    .btn-registration {
+        padding: 7px 15px 11px;
+    }
 }
 
 .login {
-    .btn-restration {
+    .btn-registration {
         display: none;
     }
 
-    .btn-user,
     .btn-exit {
         display: block;
+    }
+
+    .btn-user {
+        width: 56px;
+        height: 56px;
+        padding: 5px 5px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -39,6 +65,20 @@ header {
 
         &:after {
             transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+    }
+}
+
+.navbar-nav_main-navigation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    .nav-item {
+        .nav-link {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }
@@ -98,4 +138,32 @@ header {
 
 .navbar-nav_language {
     @extend .navbar-nav_country;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .dropdown-toggle {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.navbar-nav_small { 
+    .dropdown-menu {
+        min-width: auto;
+
+        .dropdown-item {
+            padding: 8px 25px 9px;
+        }
+    }
+}
+
+.navbar-nav_middle {
+    .dropdown-menu {
+        min-width: auto;
+
+        .dropdown-item {
+            padding: 16px 25px 17px;
+        }
+    }
 }

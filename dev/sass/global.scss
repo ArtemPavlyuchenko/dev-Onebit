@@ -115,6 +115,10 @@ a {
     padding: 12px 48px;
     border-radius: 5px;
 
+    &:hover {
+        text-decoration: none;
+    }
+
     &.btn-primary {
         background-color: $accent;
         border-color: $accent;
