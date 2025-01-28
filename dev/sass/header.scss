@@ -1,4 +1,19 @@
 header {
+    background-color: #373737;
+
+    &.fixed {
+        backdrop-filter: blur(24.5px);
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        + .wrapper {
+            padding-top: 156px;
+        }
+    }
+
     .navbar {
         padding: 0;
         &-brand {
@@ -48,6 +63,22 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            background-color: $errors;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        &.verified:before {
+            background-color: $accent;
+        }
     }
 }
 
@@ -102,6 +133,7 @@ header {
         border-radius: 8px;
         padding: 5px 0;
         border: 1px solid $stroke;
+
         .dropdown-item {
             color: $titles;
             padding: 20px 25px 21px;

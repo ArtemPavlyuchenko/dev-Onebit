@@ -207,6 +207,26 @@ a {
     }
 }
 
+.status {
+    display: inline-block;
+    border: 1px solid #242424;
+    border-radius: 3px;
+    padding: 5px 10px 9px;
+    line-height: 1;
+
+    &.status-looks-at {
+        color: $verification;
+    }
+
+    &.status-verifications {
+        color: $accent;
+    }
+
+    &.status-verification-failed {
+        color: $errors;
+    }
+}
+
 ::selection {
     color: $system;
     background-color: $accent;

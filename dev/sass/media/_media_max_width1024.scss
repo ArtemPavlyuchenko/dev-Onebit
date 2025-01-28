@@ -18,6 +18,42 @@
                 max-height: 25px;
             }
         }
+
+        &.fixed {
+            + .wrapper {
+                padding-top: 66px;
+            }
+        }
+    }
+
+    .login {
+        .btn-user {
+            width: 44px;
+            height: 44px;
+            padding: 4px 5px 6px;
+            order: -1;
+            color: $accent;
+            background-color: #20251B;
+            border: none;
+            position: relative;
+            border-radius: 8px;
+
+            &:hover,
+            &:focus {
+                background-color: #20251B;
+                color: $accent;
+            }
+        }
+
+        .navbar-collapse {
+            .status {
+                display: block;
+            }
+        }
+
+        .navbar-nav_main-navigation {
+            margin: 90px 0 128px;
+        }
     }
 
     .navbar-toggler {
@@ -26,6 +62,11 @@
         height: 44px;
         border-radius: 8px;
         position: relative;
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
     }
 
     .navbar-toggler__line {
@@ -61,6 +102,73 @@
             &:nth-child(3) {
                 opacity: 0;
             }
+        }
+    }
+
+    .navbar-nav {
+        .dropdown-menu {
+            border: none;
+
+            .dropdown-item {
+                padding: 12px 25px;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .navbar-collapse {
+        margin: 0 -20px 0;
+        padding: 0 20px;
+        z-index: 1;
+        background-color: #080807;
+        transform: translate(0, -66px);
+        position: relative;
+
+        .navbar-toggler {
+            margin-top: 22px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 78px;
+            left: 0;
+            right: 0;
+            border: 1px solid #242424;
+        }
+
+        .status {
+            position: absolute;
+            left: 20px;
+            top: 110px;
+            display: none;
+        }
+    }
+
+    .navbar-nav_country {
+        position: absolute;
+        right: 20px;
+        top: 24px;
+        
+        .dropdown-menu {
+            position: absolute;
+            border: 1px solid #4F4F4F;
+            left: -10px;
+        }
+    }
+
+    .navbar-nav_language {
+        right: 120px;
+    }
+
+    .navbar-nav_main-navigation {
+        margin: 32px 0 128px;
+
+        .nav-link {
+            font-size: 20px;
         }
     }
 
