@@ -1,0 +1,61 @@
+.banner {
+    padding-top: 40px;
+
+    > .container {
+        display: flex;
+    }
+
+    &-text {
+        max-width: 705px;
+        margin-bottom: 80px;
+    }
+
+    &-title {
+        margin-bottom: 30px;
+    }
+
+    &-subtitle {
+        font-weight: 400;
+        color: $body-text;
+    }
+
+    &-advantages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 50px;
+        max-width: 790px;
+        margin-bottom: 80px;
+    }
+
+    &-advantages-item {
+        color: $titles;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        gap: 20px;
+    }
+
+    &-link {
+        font-size: 18px;
+        font-weight: 600;
+
+        svg {
+            width: 10px;
+            height: 16px;
+            margin-left: 3px;
+            transform: rotate(-90deg);
+            transition: 0.3s;
+        }
+
+        &:hover {
+            svg {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+.banner-row {
+    display: flex;
+}

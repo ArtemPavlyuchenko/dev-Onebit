@@ -1,0 +1,37 @@
+.form-exchange {
+    .input-row {
+            background-color: $system;
+            border-radius: 12px;
+            color: $titles;
+            font-size: 24px;
+            padding: 36px;
+            width: 100%;
+            border: 1px solid $stroke;
+            align-items: center;
+    }
+
+    input {
+        border: none;
+    }
+}
+
+.nice-select {
+    border: 1px solid #4F4F4F;
+    background: #10100E;
+    padding: 16px 20px;
+    height: 56px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    min-width: 201px;
+
+    &:after {
+        border-bottom: 2px solid $body-text;
+        border-right: 2px solid $body-text; 
+        height: 10px;
+        width: 10px;
+        right: 20px;
+        top: 50%;
+    }
+}
