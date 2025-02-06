@@ -108,7 +108,7 @@ footer {
 
     &::before {
         content: "";
-        border-top: 1px solid #242424;
+        border-top: 1px solid $light-black;
         position: absolute;
         top: 0;
         left: 15px;

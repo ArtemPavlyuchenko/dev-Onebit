@@ -1,23 +1,50 @@
 .form-exchange {
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid $stroke;
+    max-width: 540px;
+    background: $background;
+
+    .give {
+        margin-bottom: 30px;
+    }
+
+    .get {
+        margin-bottom: 15px;
+    }
+
     .input-row {
-            background-color: $system;
-            border-radius: 12px;
-            color: $titles;
-            font-size: 24px;
-            padding: 36px;
-            width: 100%;
-            border: 1px solid $stroke;
-            align-items: center;
+        background-color: $system;
+        border-radius: 12px;
+        color: $titles;
+        font-size: 24px;
+        padding: 35px;
+        width: 100%;
+        border: 1px solid $stroke;
+        align-items: center;
+        gap: 15px;
+    }
+
+    label {
+        margin-bottom: 23px;
+        line-height: 1;
     }
 
     input {
         border: none;
+        padding: 0;
+    }
+
+    .btn-large {
+        padding: 43px 94px 47px;
+        font-size: 24px;
+        width: 100%;
     }
 }
 
 .nice-select {
-    border: 1px solid #4F4F4F;
-    background: #10100E;
+    border: 1px solid $stroke;
+    background: $system;
     padding: 16px 20px;
     height: 56px;
     font-size: 18px;
@@ -33,5 +60,90 @@
         width: 10px;
         right: 20px;
         top: 50%;
+        margin-top: -7px;
+    }
+}
+
+.nice-select {
+    .nice-select-dropdown {
+        background: $system;
+        border: 1px solid $stroke;
+    }
+
+    .nice-select-search-box {
+        padding: 13px 24px;
+    }
+
+    .nice-select-search {
+        background-color: #10100E;
+        border: 1px solid $body-text;
+        color: $titles;
+    }
+
+    .list {
+        max-height: 320px;
+        margin: 0;
+        @extend .scroll;
+    }
+
+    .option:hover,
+    .option.focus,
+    .option.selected.focus {
+        background: $controll-btn-bg;;
+    }
+
+    .option {
+        display: flex;
+        gap: 12px;
+        color: $titles;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 20px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            top: 0;
+            border-bottom: 1px solid $light-black;
+        }
+
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.exchange-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 42px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    &-item {
+        width: calc(50% - 24px);
+    }
+
+    &__title {
+        color: $stroke;
+        font-size: 20px;
+    }
+
+    &__value {
+        color: $accent;
+        font-size: 20px;
+    }
+}
+
+.exchange-info_row {
+    .exchange-info-item {
+        display: flex;
+        width: 100%;
+        gap: 20px;
     }
 }
