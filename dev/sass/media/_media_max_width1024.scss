@@ -1,4 +1,8 @@
 @media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
     header {
         .container {
             padding: 11px 20px;
@@ -258,5 +262,89 @@
 
     section {
         padding-bottom: $section-padding-mb;
+    }
+
+    .social-nav {
+        gap: 12px;
+    }
+
+    .icon {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+
+        img {
+            max-width: 92px;
+        }
+    }
+
+    footer {
+        border-top: 1px solid $light-black;
+        padding-top: 40px;
+
+        .footer-row,
+        .footer-info {
+            flex-direction: column;
+        }
+        
+        .container {
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .column-lg {
+            gap: 28px;
+            margin: 40px 0;
+        }
+
+        .column-sm {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+
+    .footer-nav {
+        gap: 12px;
+
+        h5 {
+            font-size: 14px;
+            line-height: 1.57;
+            margin: 0;
+        }
+
+        a {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    }
+
+    address.footer-nav {
+        margin-bottom: 0;
+
+        a {
+            font-size: 16px;
+        }
+    }
+
+    .copyright-nav {
+        display: none;
+    }
+
+    .container.copyright {
+        padding: 20px;
+        font-size: 14px;
+
+        &:before {
+            left: 20px;
+            right: 20px;
+        }
     }
 }
