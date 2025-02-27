@@ -1,5 +1,5 @@
-.reviews,
-.reviews-titles {
+.comments,
+.comments-titles {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -15,7 +15,7 @@
     }
 }
 
-.reviews-item {
+.comments-item {
     background: $system;
     border-radius: 15px; 
 }

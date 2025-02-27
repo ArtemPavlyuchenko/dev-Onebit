@@ -1,0 +1,112 @@
+.review {
+    background-color: $accent;
+    padding: 200px 0 174px;
+    margin-bottom: $section-padding;
+    border-radius: 50px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    .swiper-pagination {
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: $titles;
+            opacity: 1;
+            border-radius: 12px;
+            margin: 0 12px;
+            transition: .3s;
+        
+            &-active {
+                background-color: $accent-secondary;
+                width: 160px;
+            }
+        }
+    }
+}
+
+.swipper-wrapper {
+    align-items: flex-end;
+}
+
+.swiper-slide {
+    color: $system;
+    padding: 50px 65px 72px;
+}
+
+.review-text {
+    font-size: 32px;
+    margin-bottom: 80px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 136px;
+        height: 112px;
+        top: -48px;
+        left: -61px;
+        background: url(assets/img/icon-blockquote.svg) center/contain no-repeat;
+        z-index: -1;
+    }
+}
+
+.review-info {
+    display: flex;
+    flex-direction: column;
+    padding-right: 200xp;
+}
+
+.review-author {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+.review-date {
+    font-size: 20px;
+}
+
+.swiper-navigation {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 72px;
+    gap: 20px;
+    height: 74px;
+    z-index: 1;
+    padding-right: 65px;
+    padding-left: 20px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    border: 1px solid $accent-secondary;
+    border-radius: 50%;
+    height: 74px;
+    width: 74px;
+    margin-top: 0;
+
+    &:after {
+        content: "";
+        width: 23px;
+        height: 16px;
+        background: url(assets/img/icon-arrow-2.svg) center/contain no-repeat;
+    }
+}
+
+.swiper-button-next {
+    &:after {
+        transform: rotate(180deg);
+    }
+}
